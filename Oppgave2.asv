@@ -79,7 +79,7 @@ figure
 plot(fseis1,20*log10((abs(Xseis1))))
 
 figure
-plot( t(t > 0.5 & t < 1.5), seismogram1(t > 0.5 & t < 1.5, 1:5));
+plot( t(t > 0.5 & t < 1.5), seismogram1(0:1, 1:5));
 
 
 %Oppgave 2c

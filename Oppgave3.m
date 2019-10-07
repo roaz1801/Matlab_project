@@ -19,100 +19,55 @@ h2 = [-0.0002, -0.0001, 0.0003, 0.0005, -0.0001, -0.0009, -0.0007, ...
     -0.0021, 0.0005, 0.0018, 0.0007, -0.0007, -0.0009, -0.0001, 0.0005, ...
     0.0003, -0.0001, -0.0002];
 
-%Vi må ha to forskjellige t vektorer for å få plottet filtrene
-%Vi vet at tiden er på 6s.
-t1 = linspace(0,6,57);
-t2 = linspace(0,6,73);
-
-fs = 100; %Samplingsfrekvens
-N = 1000; %Antall punkter
-
-%{
-%Plott av filterene m.h.p tid. 
-figure
-plot(t1,h1,t2,h2)
-title('Filter vs Tid')
-xlabel('Tid')
-ylabel('Filterverdi')
-legend('h1','h2')
-
+fs = 100;
 %Frekvensspekter av de to filtrene
-[H1,fh1] = frekspekin3190(h1,N,fs);
-[H2,fh2] = frekspekin3190(h2,N,fs);
+[X1,f1] = frekspekin3190(h1,1000,100);
+[X2,f2] = frekspekin3190(h2,1000,100);
 
-%Plotter frekvensspektrene til de to
-%filtrene i ett plott.
-figure
-plot(fh1,20*log(abs(H1)),fh2,20*log(abs(H2)))
-title('Frekvensspekter av filtrene')
-xlabel('Frekvens(dB)')
-ylabel('Amplitude')
-legend('H1_{dB}(e^{jw})','H2_{dB}(e^{jw})')
-%}
-%Oppgave 2b
-
-
-t = linspace(0,6,1501);
-n = 200;
-
-%{
-N=500;
-t0=tukeywin(N,0);                 %Equivalent to rectangular window
-t25=tukeywin(N,0.25);
-t5=tukeywin(N);                   %r=0.5
-t75=tukeywin(N,0.75);
-t1=tukeywin(N,1);                 %Equivalent to Hann window
-%}
-
+t = linspace(0,2,201);
+n = 400;
 %[Xse,fse] = frekspekin3190(seismogram1,1000,fs)
-seismog1 = seismogram1(1:n+450,1:n);
-[Xseis1,fseis1] = frekspekin3190(seismog1,N,fs);
-[Xseis2,fseis2] = frekspekin3190(seismogram1(t > 0.5 & t < 1.5, 1:5),N,fs);
+seismog1 = seismogram1(1:n,1:n);
 figure
-imagesc(seismogram1)
-colormap gray
-colorbar
-
+%plot(t(1:n),seismog1)
 %plot(fse,abs(Xse))
 
-figure
-plot(fseis1,20*log10((abs(Xseis1))))
-
-figure
-plot( t(t > 0.5 & t < 1.5), seismogram1(t > 0.5 & t < 1.5, 1:5));
-
-
-%Oppgave 2c
-
-%{
 title('Plott av h1(t) og h2(t)')
 xlabel('Tid')
 ylabel('Amplitude')
 
+y2 = konvin3190(h1,seismogram1(1:150,1:100),0);
+[Xseis1,fseis1] = frekspekin3190(y2,1000,fs);
+
+plot(fseis1,20*log10((abs(Xseis1))))
+
+
+y1 = konvin3190(h1,seismogram1,0);
 
 title('Offset vs Tid')
 xlabel('Offset')
 ylabel('Tid')
-%}
+
 %plot(t,y1)
-
-y2 = zeros(1501,657); 
-%y_2(1,:) = konvin3190(h1,seismogram1(1,:),1);
-for i = 1501
-    y2(i,:) = konvin3190(h1,seismogram1(i,:),1);
-end
-
 figure
-imagesc(y2)
+imagesc(seismogram1(1:150,1:100 ))
 colormap gray
 colorbar
-
-
-%y2 = konvin3190(h2,seismogram1,1);
-%contourf(seismogram1(100:n+500,1:100));
 %set(gca, 'YDir','reverse')
-
+%plot(t,y2)
 %plot(t,seismogram1)
 
+%{
+figure
+subplot(2,1,1);
+plot(f1,20*log10(abs(X1)))
+title('Frekvensspekter av h1')
+xlabel('Frekvens')
+ylabel('Amplitude')
 
-
+subplot(2,1,2);
+plot(f2,20*log10(abs(X2)))
+title('Frekvensspekter av h2')
+xlabel('Frekvens')
+ylabel('Amplitude')
+%}
