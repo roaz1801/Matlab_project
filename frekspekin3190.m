@@ -7,7 +7,8 @@ function [X,f] = frekspekin3190(x, N, fs)
     f_hat = [0:N-1]/N;  %Antall punkter
     f = f_hat*fs;   %Tilhørende frekvens til frekvensspekteret
     X = zeros(N,1); 
-    for n = 1:N
+    %Vil bare ha halvparten av frekvensspekteret.
+    for n = 1:N/2+1
         for k=1:M
         X(n) = X(n)+x(k)*exp((-i)*2*pi*f_hat(n)*k); %Fourier transform
     end

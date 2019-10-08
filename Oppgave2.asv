@@ -53,35 +53,56 @@ legend('H1_{dB}(e^{jw})','H2_{dB}(e^{jw})')
 
 
 t = linspace(0,6,1501);
-n = 200;
-
 %{
-N=500;
-t0=tukeywin(N,0);                 %Equivalent to rectangular window
-t25=tukeywin(N,0.25);
-t5=tukeywin(N);                   %r=0.5
-t75=tukeywin(N,0.75);
-t1=tukeywin(N,1);                 %Equivalent to Hann window
+%Frekvensspekter av 10 første trasene
+[Xseis1,fseis1] = frekspekin3190(seismogram1(t > 0.5 & t < 1.5, 1),N,fs);
+
+
+t_array = t(t > 0.5 & t < 1.5);
+L = 249;
+t1 = tukeywin(L,0.2); 
+
+tukey_seismogram = seismogram1(t > 0.5 & t < 1.5, 1).*t1;
+%Frekvensspekter av 10 første trasene
+[Xseis2,fseis2] = frekspekin3190(tukey_seismogram,N,fs);
+
+figure
+subplot(2,1,1);
+plot(fseis1,20*log(abs(Xseis1)))
+title('Frekvensspekter av x og h konvolvert')
+xlabel('Frekvens')
+ylabel('Amplitude')
+
+subplot(2,1,2);
+plot(fseis2,20*log(abs(Xseis2)))
+title('Frekvensspekter av x signal')
+xlabel('Frekvens')
+ylabel('Amplitude')
+
+figure
+subplot(2,1,1);
+plot( t_array, seismogram1(t > 0.5 & t < 1.5, 1));
+title('Frekvensspekter av x og h konvolvert')
+xlabel('Frekvens')
+ylabel('Amplitude')
+
+
+subplot(2,1,2);
+plot(t_array, tukey_seismogram);
+title('Frekvensspekter av x signal')
+xlabel('Frekvens')
+ylabel('Amplitude')
 %}
 
-%[Xse,fse] = frekspekin3190(seismogram1,1000,fs)
-seismog1 = seismogram1(1:n+450,1:n);
-[Xseis1,fseis1] = frekspekin3190(seismog1,N,fs);
-[Xseis2,fseis2] = frekspekin3190(seismogram1(t > 0.5 & t < 1.5, 1:5),N,fs);
+%{
 figure
-imagesc(seismogram1)
+imagesc(offset1,t*1000,seismogram1)
 colormap gray
 colorbar
-
-%plot(fse,abs(Xse))
-
-figure
-plot(fseis1,20*log10((abs(Xseis1))))
-
-figure
-plot( t(t > 0.5 & t < 1.5), seismogram1(0:1, 1:5));
+%}
 
 
+%plot(t, t_seismogram);
 %Oppgave 2c
 
 %{
@@ -96,23 +117,48 @@ ylabel('Tid')
 %}
 %plot(t,y1)
 
-y2 = zeros(1501,657); 
-%y_2(1,:) = konvin3190(h1,seismogram1(1,:),1);
-for i = 1501
-    y2(i,:) = konvin3190(h1,seismogram1(i,:),1);
+y1 = zeros(size(seismogram1));
+y2 = zeros(size(seismogram1)); 
+
+for i = 1:601
+    y1(:,i) = konvin3190(h1,seismogram1(:,i),0);
+end
+
+for i = 1:601
+    y2(:,i) = konvin3190(h2,seismogram1(:,i),0);
 end
 
 figure
-imagesc(y2)
+imagesc(offset1,t*1000,y2)
 colormap gray
 colorbar
+title('Frekvensspekter av x og h konvolvert')
+xlabel('Frekvens')
+ylabel('Amplitude')
 
+figure
+imagesc(offset1,t*1000,y2)
+colormap gray
+colorbar
+title('Frekvensspekter av x signal')
+xlabel('Frekvens')
+ylabel('Amplitude')
 
-%y2 = konvin3190(h2,seismogram1,1);
-%contourf(seismogram1(100:n+500,1:100));
-%set(gca, 'YDir','reverse')
+figure
+imagesc(offset1,t*1000,seismogram1)
+colormap gray
+colorbar
+title('Frekvensspekter av x signal')
+xlabel('Frekvens')
+ylabel('Amplitude')
 
-%plot(t,seismogram1)
+%Plott av den første trasen
+figure
+%plot(t, y1(1:1501, 1),t, y2(1:1501,1));
+plot(t_array, y1(t > 0.5 & t < 1.5, 1),t_array,y2(t > 0.5 & t < 1.5, 1))
+title('Frekvensspekter av x signal')
+xlabel('Frekvens')
+ylabel('Amplitude')
 
 
 
