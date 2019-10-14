@@ -19,85 +19,42 @@ h2 = [-0.0002, -0.0001, 0.0003, 0.0005, -0.0001, -0.0009, -0.0007, ...
     -0.0021, 0.0005, 0.0018, 0.0007, -0.0007, -0.0009, -0.0001, 0.0005, ...
     0.0003, -0.0001, -0.0002];
 
-fs = 100;
-%Frekvensspekter av de to filtrene
-[X1,f1] = frekspekin3190(h1,1000,100);
-[X2,f2] = frekspekin3190(h2,1000,100);
+%Frekvensspekter av direkte ankomst
+[X1,f1] = frekspekin3190(y1(t > 0.3 & t < 0.8,offset1 == 600),1000,fs);
 
-%figure
-%imagesc(y1(1:200,1:150))
-%colormap gray
-%colorbar
-
-%plot(t_array, y1(t > 0.5 & t < 1.5, 1))
-
-[Xseis1,fseis1] = frekspekin3190(y1(t > 0.5 & t < 1.5,1),1000,fs);
-
-%figure
-%plot(fseis1,20*log(abs(Xseis1)))
-
-L = 249;
+%Setter opp tukeywin
+L = 124;
 t1 = tukeywin(L,1); 
-tukey_y1= y1(t > 0.5 & t < 1.5, 1).*t1;
+%Bruker tukeywin på signalet
+tukey_y1= y1(t > 0.3 & t < 0.8, offset1 == 600).*t1;
 
-[Xseis2,fseis2] = frekspekin3190(tukey_y1,1000,fs);
-%figure
-%plot(fseis1,20*log(abs(Xseis2)))
+[X_tukey,f_tukey] = frekspekin3190(tukey_y1,1000,fs);
 
-figure
-imagesc(offset1,t*1000,y1)
-
-
-
-figure
-plot(t(t > 0 & t < 0.5), y1(t > 0 & t < 0.5, 1))
-
-%{
-n = 10;
-%[Xse,fse] = frekspekin3190(seismogram1,1000,fs)
-seismog1 = seismogram1(1:n,1:n);
-figure
-plot(t(1:n),seismog1)
-%plot(fse,abs(Xse))
-
-title('Plott av h1(t) og h2(t)')
-xlabel('Tid')
-ylabel('Amplitude')
-
-
-[Xseis1,fseis1] = frekspekin3190(y2,1000,fs);
-
-figure
-plot(fseis1,20*log10((abs(Xseis1))))
-
-
-y1 = konvin3190(h1,seismogram1,0);
-
-title('Offset vs Tid')
-xlabel('Offset')
-ylabel('Tid')
-
-%plot(t,y1)
-figure
-imagesc(seismogram1(1:150,1:100 ))
-colormap gray
-colorbar
-%set(gca, 'YDir','reverse')
-%plot(t,y2)
-%plot(t,seismogram1)
-
-%{
+%Plotter direkte ankomst
 figure
 subplot(2,1,1);
-plot(f1,20*log10(abs(X1)))
-title('Frekvensspekter av h1')
-xlabel('Frekvens')
+plot(f1,20*log(abs(X1)));
+title('Frekvensspekter av direkte ankomst')
+xlabel('Frekvens(Hz)')
+ylabel('Magnitude(dB)')
+
+subplot(2,1,2);
+plot(f_tukey,20*log(abs(X_tukey)))
+title('Frekvensspekter av direkte ankomst, med tukeywin')
+xlabel('Frekvens(Hz)')
+ylabel('Magnitude(dB)')
+
+figure
+subplot(2,1,1);
+plot(t(t > 0.3 & t < 0.8), y1(t > 0.3 & t < 0.8,offset1 ==600))
+title('Tidsplott av direkte ankomst')
+xlabel('Tid(s), 0.3s til 0.8s')
 ylabel('Amplitude')
 
 subplot(2,1,2);
-plot(f2,20*log10(abs(X2)))
-title('Frekvensspekter av h2')
-xlabel('Frekvens')
+plot(t(t > 0.3 & t < 0.8), tukey_y1)
+title('Tidsplott av direkte ankomst, med tukeywin')
+xlabel('Tid(s), 0.3s til 0.8s')
 ylabel('Amplitude')
-%}
-%}
+
+

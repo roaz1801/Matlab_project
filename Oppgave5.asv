@@ -1,0 +1,5 @@
+
+figure
+plot(t(t > 0.3 & t < 0.8), abs(y1(t > 0.3 & t < 0.8,offset1==5)),t(t > 0.3 & t < 0.8), abs(y1(t > 0.3 & t < 0.8,offset1==100)))
+
+

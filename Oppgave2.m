@@ -24,102 +24,84 @@ h2 = [-0.0002, -0.0001, 0.0003, 0.0005, -0.0001, -0.0009, -0.0007, ...
 t1 = linspace(0,6,57);
 t2 = linspace(0,6,73);
 
-fs = 100; %Samplingsfrekvens
+fs1 = 1/(t1(2)-t1(1)); %Samplingsfrekvens
+fs2 = 1/(t1(2)-t(1));
 N = 1000; %Antall punkter
+fs = 1/(t(2)-t(1));
 
-%{
+
 %Plott av filterene m.h.p tid. 
 figure
 plot(t1,h1,t2,h2)
 title('Filter vs Tid')
-xlabel('Tid')
+xlabel('Tid(s)')
 ylabel('Filterverdi')
 legend('h1','h2')
 
 %Frekvensspekter av de to filtrene
-[H1,fh1] = frekspekin3190(h1,N,fs);
-[H2,fh2] = frekspekin3190(h2,N,fs);
+[H1,fh1] = frekspekin3190(h1,N,fs1);
+[H2,fh2] = frekspekin3190(h2,N,fs2);
 
 %Plotter frekvensspektrene til de to
 %filtrene i ett plott.
 figure
 plot(fh1,20*log(abs(H1)),fh2,20*log(abs(H2)))
 title('Frekvensspekter av filtrene')
-xlabel('Frekvens(dB)')
-ylabel('Amplitude')
+xlabel('Frekvens(Hz)')
+ylabel('Magnitude(dB)')
 legend('H1_{dB}(e^{jw})','H2_{dB}(e^{jw})')
-%}
-%Oppgave 2b
 
+
+%Oppgave 2b
 
 t = linspace(0,6,1501);
 
 %Frekvensspekter av 10 første trasene
-[Xseis1,fseis1] = frekspekin3190(seismogram1(t > 0.5 & t < 1.5, 1),N,fs);
+[Xseis1,fseis1] = frekspekin3190(seismogram1(t > 0.5 & t < 1.5, 1:10),N,fs);
 
-
+%Setter opp tukeywin
 t_array = t(t > 0.5 & t < 1.5);
 L = 249;
 t1 = tukeywin(L,1); 
 
-tukey_seismogram = seismogram1(t > 0.5 & t < 1.5, 1).*t1;
+%Bruker tukeywin på signalet
+tukey_seismogram = seismogram1(t > 0.5 & t < 1.5, 1:10).*t1;
+
 %Frekvensspekter av 10 første trasene
 [Xseis2,fseis2] = frekspekin3190(tukey_seismogram,N,fs);
 
+%Plotter nærtraser 
 figure
 subplot(2,1,1);
 plot(fseis1,20*log(abs(Xseis1)))
-title('Frekvensspekter av x og h konvolvert')
-xlabel('Frekvens')
-ylabel('Amplitude')
+title('Frekvensspekter av nærtraser')
+xlabel('Frekvens(Hz)')
+ylabel('Magnitude(dB)')
 
 subplot(2,1,2);
 plot(fseis2,20*log(abs(Xseis2)))
-title('Frekvensspekter av x signal')
-xlabel('Frekvens')
-ylabel('Amplitude')
+title('Frekvensspekter av nærtraser med tukeywin')
+xlabel('Frekvens(Hz)')
+ylabel('Magnitude(dB)')
 
 figure
 subplot(2,1,1);
-plot( t_array, seismogram1(t > 0.5 & t < 1.5, 1));
-title('Frekvensspekter av x og h konvolvert')
-xlabel('Frekvens')
+plot( t_array, seismogram1(t > 0.5 & t < 1.5, 1:10));
+title('Tidsplott av nærtraser, 0.5s til 1.5s')
+xlabel('Tid(s)')
 ylabel('Amplitude')
-
 
 subplot(2,1,2);
 plot(t_array, tukey_seismogram);
-title('Frekvensspekter av x signal')
-xlabel('Frekvens')
+title('Tidsplott av nærtraser, 0.5s til 1.5s med tukeywin')
+xlabel('Tid(s)')
 ylabel('Amplitude')
 
-
-%{
-figure
-imagesc(offset1,t*1000,seismogram1)
-colormap gray
-colorbar
-%}
-
-
-%plot(t, t_seismogram);
 %Oppgave 2c
-
-%{
-title('Plott av h1(t) og h2(t)')
-xlabel('Tid')
-ylabel('Amplitude')
-
-
-title('Offset vs Tid')
-xlabel('Offset')
-ylabel('Tid')
-%}
-%plot(t,y1)
-
 y1 = zeros(size(seismogram1));
 y2 = zeros(size(seismogram1)); 
 
+%Filtrerer signalene
 for i = 1:601
     y1(:,i) = konvin3190(h1,seismogram1(:,i),0);
 end
@@ -128,37 +110,40 @@ for i = 1:601
     y2(:,i) = konvin3190(h2,seismogram1(:,i),0);
 end
 
+%Plotter gatherene
 figure
 imagesc(offset1,t*1000,y1)
 colormap gray
 colorbar
-title('y1')
-xlabel('Frekvens')
-ylabel('Amplitude')
+caxis([-0.0025,0.0025])
+title('Gather filtrert med h1')
+xlabel('Offset(m)')
+ylabel('Tid(ms)')
 
 figure
 imagesc(offset1,t*1000,y2)
 colormap gray
 colorbar
-title('y2')
-xlabel('Frekvens')
-ylabel('Amplitude')
+caxis([-0.0025,0.0025])
+title('Gather filtrert med h2')
+xlabel('Offset(m)')
+ylabel('Tid(ms)')
 
 figure
 imagesc(offset1,t*1000,seismogram1)
 colormap gray
 colorbar
-title('Frekvensspekter av x signal')
-xlabel('Frekvens')
-ylabel('Amplitude')
+caxis([-0.0025,0.0025])
+title('Gather, ikke filtrert')
+xlabel('Offset(m)')
+ylabel('Tid(ms)')
 
 %Plott av den første trasen
 figure
-%plot(t, y1(1:1501, 1),t, y2(1:1501,1));
 plot(t_array, y1(t > 0.5 & t < 1.5, 1),t_array,y2(t > 0.5 & t < 1.5, 1))
-title('Frekvensspekter av x signal')
-xlabel('Frekvens')
+title('Plott av den første trasen')
+xlabel('Tid(s), 0.5s til 1.5s')
 ylabel('Amplitude')
-
+legend('Filtrert med h1','Filtrert med h2')
 
 

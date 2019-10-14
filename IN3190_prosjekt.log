@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.4.5)  6 OCT 2019 14:46
+This is XeTeX, Version 3.14159265-2.6-0.999991 (MiKTeX 2.9.7000 64-bit) (preloaded format=xelatex 2019.10.11)  12 OCT 2019 15:47
 entering extended mode
 **./IN3190_prosjekt.tex
 (IN3190_prosjekt.tex
@@ -25,6 +25,10 @@ File: size11.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
 Package: inputenc 2018/08/11 v1.3c Input encoding file
 \inpenc@prehook=\toks14
 \inpenc@posthook=\toks15
+
+
+Package inputenc Warning: inputenc package ignored with utf8 based engines.
+
 )
 ("C:\Users\Roshan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/apacite\apacite.s
 ty"
@@ -57,11 +61,11 @@ Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 hics.cfg"
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: pdftex.def on input line 99.
+Package graphics Info: Driver file: xetex.def on input line 99.
 
-("C:\Users\Roshan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-def\pdft
-ex.def"
-File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+("C:\Users\Roshan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-def\xete
+x.def"
+File: xetex.def 2017/06/24 v5.0h Graphics/color driver for xetex
 ))
 \Gin@req@height=\dimen103
 \Gin@req@width=\dimen104
@@ -74,34 +78,6 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks18
 \@floatcapt=\box28
 )
-("C:\Users\Roshan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\listings
-.sty"
-\lst@mode=\count90
-\lst@gtempboxa=\box29
-\lst@token=\toks19
-\lst@length=\count91
-\lst@currlwidth=\dimen105
-\lst@column=\count92
-\lst@pos=\count93
-\lst@lostspace=\dimen106
-\lst@width=\dimen107
-\lst@newlines=\count94
-\lst@lineno=\count95
-\lst@maxwidth=\dimen108
-
-("C:\Users\Roshan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstmisc.
-sty"
-File: lstmisc.sty 2019/02/27 1.8b (Carsten Heinz)
-\c@lstnumber=\count96
-\lst@skipnumbers=\count97
-\lst@framebox=\box30
-)
-("C:\Users\Roshan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\listings
-.cfg"
-File: listings.cfg 2019/02/27 1.8b listings configuration
-))
-Package: listings 2019/02/27 1.8b (Carsten Heinz)
-
 ("C:\Users\Roshan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsmath.s
 ty"
 Package: amsmath 2018/12/01 v2.17b AMS math features
@@ -116,53 +92,53 @@ Package: amstext 2000/06/29 v2.01 AMS text
 ("C:\Users\Roshan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsgen.st
 y"
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks20
-\ex@=\dimen109
+\@emptytoks=\toks19
+\ex@=\dimen105
 ))
 ("C:\Users\Roshan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsbsy.st
 y"
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen110
+\pmbraise@=\dimen106
 )
 ("C:\Users\Roshan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsopn.st
 y"
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count98
+\inf@bad=\count90
 LaTeX Info: Redefining \frac on input line 223.
-\uproot@=\count99
-\leftroot@=\count100
+\uproot@=\count91
+\leftroot@=\count92
 LaTeX Info: Redefining \overline on input line 385.
-\classnum@=\count101
-\DOTSCASE@=\count102
+\classnum@=\count93
+\DOTSCASE@=\count94
 LaTeX Info: Redefining \ldots on input line 482.
 LaTeX Info: Redefining \dots on input line 485.
 LaTeX Info: Redefining \cdots on input line 606.
-\Mathstrutbox@=\box31
-\strutbox@=\box32
-\big@size=\dimen111
+\Mathstrutbox@=\box29
+\strutbox@=\box30
+\big@size=\dimen107
 LaTeX Font Info:    Redeclaring font encoding OML on input line 729.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 730.
-\macc@depth=\count103
-\c@MaxMatrixCols=\count104
+\macc@depth=\count95
+\c@MaxMatrixCols=\count96
 \dotsspace@=\muskip10
-\c@parentequation=\count105
-\dspbrk@lvl=\count106
-\tag@help=\toks21
-\row@=\count107
-\column@=\count108
-\maxfields@=\count109
-\andhelp@=\toks22
-\eqnshift@=\dimen112
-\alignsep@=\dimen113
-\tagshift@=\dimen114
-\tagwidth@=\dimen115
-\totwidth@=\dimen116
-\lineht@=\dimen117
-\@envbody=\toks23
+\c@parentequation=\count97
+\dspbrk@lvl=\count98
+\tag@help=\toks20
+\row@=\count99
+\column@=\count100
+\maxfields@=\count101
+\andhelp@=\toks21
+\eqnshift@=\dimen108
+\alignsep@=\dimen109
+\tagshift@=\dimen110
+\tagwidth@=\dimen111
+\totwidth@=\dimen112
+\lineht@=\dimen113
+\@envbody=\toks22
 \multlinegap=\skip49
 \multlinetaggap=\skip50
-\mathdisplay@stack=\toks24
+\mathdisplay@stack=\toks23
 LaTeX Info: Redefining \[ on input line 2844.
 LaTeX Info: Redefining \] on input line 2845.
 )
@@ -183,46 +159,98 @@ Package ifvtex Info: VTeX not detected.
 .sty"
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-\Gm@cnth=\count110
-\Gm@cntv=\count111
-\c@Gm@tempcnt=\count112
-\Gm@bindingoffset=\dimen118
-\Gm@wd@mp=\dimen119
-\Gm@odd@mp=\dimen120
-\Gm@even@mp=\dimen121
-\Gm@layoutwidth=\dimen122
-\Gm@layoutheight=\dimen123
-\Gm@layouthoffset=\dimen124
-\Gm@layoutvoffset=\dimen125
-\Gm@dimlist=\toks25
+\Gm@cnth=\count102
+\Gm@cntv=\count103
+\c@Gm@tempcnt=\count104
+\Gm@bindingoffset=\dimen114
+\Gm@wd@mp=\dimen115
+\Gm@odd@mp=\dimen116
+\Gm@even@mp=\dimen117
+\Gm@layoutwidth=\dimen118
+\Gm@layoutheight=\dimen119
+\Gm@layouthoffset=\dimen120
+\Gm@layoutvoffset=\dimen121
+\Gm@dimlist=\toks24
 
-("C:\Users\Roshan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/geometry\geometry
-.cfg"))
+("C:\Users\Roshan\AppData\Local\Programs\MiKTeX 2.9\tex/xelatex/xetexconfig\geo
+metry.cfg"))
 ("C:\Users\Roshan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/algorithms\algori
 thm.sty"
+Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
 Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
 nment
 
 ("C:\Users\Roshan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ifthen.sty"
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
-\@float@every@algorithm=\toks26
-\c@algorithm=\count113
+\@float@every@algorithm=\toks25
+\c@algorithm=\count105
+)
+("C:\Users\Roshan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\listings
+.sty"
+\lst@mode=\count106
+\lst@gtempboxa=\box31
+\lst@token=\toks26
+\lst@length=\count107
+\lst@currlwidth=\dimen122
+\lst@column=\count108
+\lst@pos=\count109
+\lst@lostspace=\dimen123
+\lst@width=\dimen124
+\lst@newlines=\count110
+\lst@lineno=\count111
+\lst@maxwidth=\dimen125
+
+("C:\Users\Roshan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstmisc.
+sty"
+File: lstmisc.sty 2019/02/27 1.8b (Carsten Heinz)
+\c@lstnumber=\count112
+\lst@skipnumbers=\count113
+\lst@framebox=\box32
+)
+("C:\Users\Roshan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\listings
+.cfg"
+File: listings.cfg 2019/02/27 1.8b listings configuration
+))
+Package: listings 2019/02/27 1.8b (Carsten Heinz)
+
+("C:\Users\Roshan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\verbatim.st
+y"
+Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks27
+\verbatim@line=\toks28
+\verbatim@in@stream=\read1
+)
+("C:\Users\Roshan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstlang1
+.sty"
+File: lstlang1.sty 2019/02/27 1.8b listings language file
+)
+("C:\Users\Roshan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\color.st
+y"
+Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
+
+("C:\Users\Roshan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\colo
+r.cfg"
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: xetex.def on input line 147.
 ) (IN3190_prosjekt.aux)
 \openout1 = `IN3190_prosjekt.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
 \c@maskedRefs=\count114
 
 ("C:\Users\Roshan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/apacite\english.a
@@ -231,77 +259,6 @@ File: english.apc 2013/07/21 v6.03 apacite language file
 LaTeX Info: Redefining \BPBI on input line 129.
 LaTeX Info: Redefining \BHBI on input line 130.
 )
-("C:\Users\Roshan\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\supp-
-pdf.mkii"
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count115
-\scratchdimen=\dimen126
-\scratchbox=\box33
-\nofMPsegments=\count116
-\nofMParguments=\count117
-\everyMPshowfont=\toks27
-\MPscratchCnt=\count118
-\MPscratchDim=\dimen127
-\MPnumerator=\count119
-\makeMPintoPDFobject=\count120
-\everyMPtoPDFconversion=\toks28
-)
-("C:\Users\Roshan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\epstopdf
--base.sty"
-Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
-
-("C:\Users\Roshan\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\infwar
-err.sty"
-Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
-)
-("C:\Users\Roshan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\grfext.s
-ty"
-Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
-
-("C:\Users\Roshan\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\kvdefi
-nekeys.sty"
-Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
-
-("C:\Users\Roshan\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\ltxcmd
-s.sty"
-Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
-)))
-("C:\Users\Roshan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\kvoption
-s.sty"
-Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
-
-("C:\Users\Roshan\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\kvsetk
-eys.sty"
-Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
-
-("C:\Users\Roshan\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\etexcm
-ds.sty"
-Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
-
-("C:\Users\Roshan\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\ifluat
-ex.sty"
-Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
-Package ifluatex Info: LuaTeX not detected.
-))))
-("C:\Users\Roshan\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\pdftex
-cmds.sty"
-Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO
-)
-Package pdftexcmds Info: LuaTeX not detected.
-Package pdftexcmds Info: \pdf@primitive is available.
-Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
-)
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
-38.
-Package grfext Info: Graphics extension search list:
-(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
-G,.JBIG2,.JB2,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 456.
-)
-\c@lstlisting=\count121
-
-*geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
 * driver: pdftex
@@ -335,48 +292,422 @@ G,.JBIG2,.JB2,.eps]
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<1c_xh.png, id=1, 406.51875pt x 312.41719pt>
-File: 1c_xh.png Graphic file (type png)
-<use 1c_xh.png>
-Package pdftex.def Info: 1c_xh.png  used on input line 22.
-(pdftex.def)             Requested size: 365.86348pt x 281.17285pt.
-<1c_hfrek.png, id=3, 380.17032pt x 311.66437pt>
-File: 1c_hfrek.png Graphic file (type png)
-<use 1c_hfrek.png>
-Package pdftex.def Info: 1c_hfrek.png  used on input line 27.
-(pdftex.def)             Requested size: 342.15012pt x 280.49533pt.
+\c@lstlisting=\count115
+File: 1c_xh.png Graphic file (type bmp)
+<1c_xh.png>
+File: 1c_hfrek.png Graphic file (type bmp)
+<1c_hfrek.png>
 [1
 
-{C:/Users/Roshan/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./1c_xh.pn
-g>]
-<2a_firtid.png, id=12, 386.94562pt x 307.90031pt>
-File: 2a_firtid.png Graphic file (type png)
-<use 2a_firtid.png>
-Package pdftex.def Info: 2a_firtid.png  used on input line 35.
-(pdftex.def)             Requested size: 348.24783pt x 277.10771pt.
- [2 <./1c_hfrek.png>]
-<2a_firfrek.png, id=17, 390.70969pt x 309.40594pt>
-File: 2a_firfrek.png Graphic file (type png)
-<use 2a_firfrek.png>
-Package pdftex.def Info: 2a_firfrek.png  used on input line 40.
-(pdftex.def)             Requested size: 351.63547pt x 278.46277pt.
- [3 <./2a_firtid.png>] [4 <./2a_firfrek.png>]
-(IN3190_prosjekt.aux) ) 
-Here is how much of TeX's memory you used:
- 4486 strings out of 492945
- 63754 string characters out of 3125809
- 139136 words of memory out of 3000000
- 8328 multiletter control sequences out of 15000+200000
- 7649 words of font info for 28 fonts, out of 3000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 41i,7n,32p,579b,239s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/Roshan/AppData/Local/Programs/MiKTeX 2.9/fonts
-/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Roshan/AppData/Local/Programs/MiK
-TeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Roshan/AppData/Local
-/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on IN3190_prosjekt.pdf (4 pages, 111120 bytes).
-PDF statistics:
- 36 PDF objects out of 1000 (max. 8388607)
- 0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+]
+File: konvin3190.m  (verbatim)
 
+Overfull \hbox (21.4882pt too wide) in paragraph at lines 49--49
+[]\TU/lmtt/m/n/10.95 %   Dersom ylen = 0 er utgangssignalet lengde length(x), m
+ens hvis ylen[] 
+ []
+
+[2]
+Invalid UTF-8 byte or sequence at line 49 replaced by U+FFFD.
+Missing character: There is no � in font [lmmono10-regular]:!
+Invalid UTF-8 byte or sequence at line 49 replaced by U+FFFD.
+Missing character: There is no � in font [lmmono10-regular]:!
+File: frekspekin3190.m  (verbatim)
+Invalid UTF-8 byte or sequence at line 52 replaced by U+FFFD.
+Missing character: There is no � in font [lmmono10-regular]:!
+
+Overfull \hbox (24.5542pt too wide) in paragraph at lines 52--52
+[]\TU/lmtt/m/n/10.95 %   signalet x med samplingsfrekvens fs for N punkter p� e
+nhetssirkelen.[] 
+ []
+
+Invalid UTF-8 byte or sequence at line 52 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 52 replaced by U+FFFD.
+Missing character: There is no � in font [lmmono10-regular]:!
+Missing character: There is no � in font [lmmono10-regular]:!
+[3]
+Invalid UTF-8 byte or sequence at line 52 replaced by U+FFFD.
+Missing character: There is no � in font [lmmono10-regular]:!
+
+Overfull \hbox (15.73946pt too wide) in paragraph at lines 52--52
+[]        \TU/lmtt/m/n/10.95 X(n) = X(n)+x(k)*exp((-i)*2*pi*f_hat(n)*k); %Fouri
+er transform[] 
+ []
+
+File: oppgave1.m  (verbatim)
+Invalid UTF-8 byte or sequence at line 55 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 55 replaced by U+FFFD.
+Missing character: There is no � in font [lmmono10-regular]:!
+Missing character: There is no � in font [lmmono10-regular]:!
+
+Overfull \hbox (21.87144pt too wide) in paragraph at lines 55--55
+[]\TU/lmtt/m/n/10.95 %Vi vil ha forksjellig lengde p� t avhengi av om lengden v
+i velger p� y.[] 
+ []
+
+[4]
+File: 2a_firtid.png Graphic file (type bmp)
+<2a_firtid.png>
+ [5]
+File: 2a_firfrek.png Graphic file (type bmp)
+<2a_firfrek.png>
+ [6]
+File: 2b_nertraser.png Graphic file (type bmp)
+<2b_nertraser.png>
+
+Overfull \hbox (60.21472pt too wide) in paragraph at lines 73--74
+[][] 
+ []
+
+[7]
+File: 2b_nertrasefrek.png Graphic file (type bmp)
+<2b_nertrasefrek.png>
+ [8]
+File: 2c_ufiltrert.png Graphic file (type bmp)
+<2c_ufiltrert.png>
+ [9]
+File: 2c_h2filter.png Graphic file (type bmp)
+<2c_h2filter.png>
+ [10]
+File: 2c_h1filter.png Graphic file (type bmp)
+<2c_h1filter.png>
+ [11]
+File: 2c_forstetrase.png Graphic file (type bmp)
+<2c_forstetrase.png>
+ [12]
+File: oppgave2.m  (verbatim)
+
+Overfull \hbox (15.73946pt too wide) in paragraph at lines 111--111
+[]\TU/lmtt/m/n/10.95 h1 = [0.0002, 0.0001, -0.0001, -0.0005, -0.0011, -0.0017, 
+-0.0019, ...[] 
+ []
+
+
+Overfull \hbox (32.9857pt too wide) in paragraph at lines 111--111
+[]    \TU/lmtt/m/n/10.95 -0.0016, -0.0005, 0.0015, 0.0040, 0.0064, 0.0079, 0.00
+75, 0.0046, ...[] 
+ []
+
+
+Overfull \hbox (15.73946pt too wide) in paragraph at lines 111--111
+[]    \TU/lmtt/m/n/10.95 -0.0009, -0.0084, -0.0164, -0.0227, -0.0248, -0.0203, 
+-0.0079, ...[] 
+ []
+
+
+Overfull \hbox (21.4882pt too wide) in paragraph at lines 111--111
+[]    \TU/lmtt/m/n/10.95 0.0127, 0.0400, 0.0712, 0.1021, 0.1284, 0.1461, 0.1523
+, 0.1461, ...[] 
+ []
+
+
+Overfull \hbox (38.73445pt too wide) in paragraph at lines 111--111
+[]    \TU/lmtt/m/n/10.95 0.1284, 0.1021, 0.0712, 0.0400, 0.0127, -0.0079, -0.02
+03, -0.0248, ...[] 
+ []
+
+
+Overfull \hbox (44.4832pt too wide) in paragraph at lines 111--111
+[]    \TU/lmtt/m/n/10.95 -0.0227, -0.0164, -0.0084, -0.0009, 0.0046, 0.0075, 0.
+0079, 0.0064, ...[] 
+ []
+
+
+Overfull \hbox (4.24196pt too wide) in paragraph at lines 111--111
+[]    \TU/lmtt/m/n/10.95 0.0040, 0.0015, -0.0005, -0.0016, -0.0019, -0.0017, -0
+.0011, ...[] 
+ []
+
+
+Overfull \hbox (15.73946pt too wide) in paragraph at lines 111--111
+[]\TU/lmtt/m/n/10.95 h2 = [-0.0002, -0.0001, 0.0003, 0.0005, -0.0001, -0.0009, 
+-0.0007, ...[] 
+ []
+
+[13]
+Overfull \hbox (32.9857pt too wide) in paragraph at lines 111--111
+[]    \TU/lmtt/m/n/10.95 0.0007, 0.0018, 0.0005, -0.0021, -0.0027, 0.0004, 0.00
+42, 0.0031, ...[] 
+ []
+
+
+Overfull \hbox (4.24196pt too wide) in paragraph at lines 111--111
+[]    \TU/lmtt/m/n/10.95 -0.0028, -0.0067, -0.0023, 0.0069, 0.0091, -0.0010, -0
+.0127, ...[] 
+ []
+
+
+Overfull \hbox (38.73445pt too wide) in paragraph at lines 111--111
+[]    \TU/lmtt/m/n/10.95 -0.0100, 0.0077, 0.0198, 0.0075, -0.0193, -0.0272, 0.0
+014, 0.0386, ...[] 
+ []
+
+
+Overfull \hbox (38.73445pt too wide) in paragraph at lines 111--111
+[]    \TU/lmtt/m/n/10.95 0.0338, -0.0246, -0.0771, -0.0384, 0.1128, 0.2929, 0.3
+734, 0.2929, ...[] 
+ []
+
+
+Overfull \hbox (44.4832pt too wide) in paragraph at lines 111--111
+[]    \TU/lmtt/m/n/10.95 0.1128, -0.0384, -0.0771, -0.0246, 0.0338, 0.0386, 0.0
+014, -0.0272, ...[] 
+ []
+
+
+Overfull \hbox (44.4832pt too wide) in paragraph at lines 111--111
+[]    \TU/lmtt/m/n/10.95 -0.0193, 0.0075, 0.0198, 0.0077, -0.0100, -0.0127, -0.
+0010, 0.0091, ...[] 
+ []
+
+
+Overfull \hbox (44.4832pt too wide) in paragraph at lines 111--111
+[]    \TU/lmtt/m/n/10.95 0.0069, -0.0023, -0.0067, -0.0028, 0.0031, 0.0042, 0.0
+004, -0.0027, ...[] 
+ []
+
+
+Overfull \hbox (44.4832pt too wide) in paragraph at lines 111--111
+[]    \TU/lmtt/m/n/10.95 -0.0021, 0.0005, 0.0018, 0.0007, -0.0007, -0.0009, -0.
+0001, 0.0005, ...[] 
+ []
+
+Invalid UTF-8 byte or sequence at line 111 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 111 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 111 replaced by U+FFFD.
+Missing character: There is no � in font [lmmono10-regular]:!
+Missing character: There is no � in font [lmmono10-regular]:!
+Missing character: There is no � in font [lmmono10-regular]:!
+Invalid UTF-8 byte or sequence at line 111 replaced by U+FFFD.
+Missing character: There is no � in font [lmmono10-regular]:!
+[14]
+Invalid UTF-8 byte or sequence at line 111 replaced by U+FFFD.
+Missing character: There is no � in font [lmmono10-regular]:!
+
+Overfull \hbox (50.23193pt too wide) in paragraph at lines 111--111
+[]\TU/lmtt/m/n/10.95 [Xseis1,fseis1] = frekspekin3190(seismogram1(t > 0.5 & t <
+ 1.5, 1:10),N,fs);[] 
+ []
+
+Invalid UTF-8 byte or sequence at line 111 replaced by U+FFFD.
+Missing character: There is no � in font [lmmono10-regular]:!
+Invalid UTF-8 byte or sequence at line 111 replaced by U+FFFD.
+Missing character: There is no � in font [lmmono10-regular]:!
+Invalid UTF-8 byte or sequence at line 111 replaced by U+FFFD.
+Missing character: There is no � in font [lmmono10-regular]:!
+Invalid UTF-8 byte or sequence at line 111 replaced by U+FFFD.
+Missing character: There is no � in font [lmmono10-regular]:!
+Invalid UTF-8 byte or sequence at line 111 replaced by U+FFFD.
+Missing character: There is no � in font [lmmono10-regular]:!
+Invalid UTF-8 byte or sequence at line 111 replaced by U+FFFD.
+Missing character: There is no � in font [lmmono10-regular]:!
+[15]
+Invalid UTF-8 byte or sequence at line 111 replaced by U+FFFD.
+Missing character: There is no � in font [lmmono10-regular]:!
+ [16]
+Invalid UTF-8 byte or sequence at line 111 replaced by U+FFFD.
+Missing character: There is no � in font [lmmono10-regular]:!
+
+Overfull \hbox (27.23695pt too wide) in paragraph at lines 111--111
+[]\TU/lmtt/m/n/10.95 plot(t_array, y1(t > 0.5 & t < 1.5, 1),t_array,y2(t > 0.5 
+& t < 1.5, 1))[] 
+ []
+
+Invalid UTF-8 byte or sequence at line 111 replaced by U+FFFD.
+Missing character: There is no � in font [lmmono10-regular]:!
+File: 3b_ankomst.png Graphic file (type bmp)
+<3b_ankomst.png>
+
+Overfull \hbox (12.52757pt too wide) in paragraph at lines 115--116
+[][] 
+ []
+
+[17]
+File: 3b_ankomstspek.png Graphic file (type bmp)
+<3b_ankomstspek.png>
+
+Overfull \hbox (58.92764pt too wide) in paragraph at lines 120--121
+[][] 
+ []
+
+[18]
+File: oppgave3.m  (verbatim)
+
+Overfull \hbox (15.73946pt too wide) in paragraph at lines 128--128
+[]\TU/lmtt/m/n/10.95 h1 = [0.0002, 0.0001, -0.0001, -0.0005, -0.0011, -0.0017, 
+-0.0019, ...[] 
+ []
+
+
+Overfull \hbox (32.9857pt too wide) in paragraph at lines 128--128
+[]    \TU/lmtt/m/n/10.95 -0.0016, -0.0005, 0.0015, 0.0040, 0.0064, 0.0079, 0.00
+75, 0.0046, ...[] 
+ []
+
+
+Overfull \hbox (15.73946pt too wide) in paragraph at lines 128--128
+[]    \TU/lmtt/m/n/10.95 -0.0009, -0.0084, -0.0164, -0.0227, -0.0248, -0.0203, 
+-0.0079, ...[] 
+ []
+
+
+Overfull \hbox (21.4882pt too wide) in paragraph at lines 128--128
+[]    \TU/lmtt/m/n/10.95 0.0127, 0.0400, 0.0712, 0.1021, 0.1284, 0.1461, 0.1523
+, 0.1461, ...[] 
+ []
+
+[19]
+Overfull \hbox (38.73445pt too wide) in paragraph at lines 128--128
+[]    \TU/lmtt/m/n/10.95 0.1284, 0.1021, 0.0712, 0.0400, 0.0127, -0.0079, -0.02
+03, -0.0248, ...[] 
+ []
+
+
+Overfull \hbox (44.4832pt too wide) in paragraph at lines 128--128
+[]    \TU/lmtt/m/n/10.95 -0.0227, -0.0164, -0.0084, -0.0009, 0.0046, 0.0075, 0.
+0079, 0.0064, ...[] 
+ []
+
+
+Overfull \hbox (4.24196pt too wide) in paragraph at lines 128--128
+[]    \TU/lmtt/m/n/10.95 0.0040, 0.0015, -0.0005, -0.0016, -0.0019, -0.0017, -0
+.0011, ...[] 
+ []
+
+
+Overfull \hbox (15.73946pt too wide) in paragraph at lines 128--128
+[]\TU/lmtt/m/n/10.95 h2 = [-0.0002, -0.0001, 0.0003, 0.0005, -0.0001, -0.0009, 
+-0.0007, ...[] 
+ []
+
+
+Overfull \hbox (32.9857pt too wide) in paragraph at lines 128--128
+[]    \TU/lmtt/m/n/10.95 0.0007, 0.0018, 0.0005, -0.0021, -0.0027, 0.0004, 0.00
+42, 0.0031, ...[] 
+ []
+
+
+Overfull \hbox (4.24196pt too wide) in paragraph at lines 128--128
+[]    \TU/lmtt/m/n/10.95 -0.0028, -0.0067, -0.0023, 0.0069, 0.0091, -0.0010, -0
+.0127, ...[] 
+ []
+
+
+Overfull \hbox (38.73445pt too wide) in paragraph at lines 128--128
+[]    \TU/lmtt/m/n/10.95 -0.0100, 0.0077, 0.0198, 0.0075, -0.0193, -0.0272, 0.0
+014, 0.0386, ...[] 
+ []
+
+
+Overfull \hbox (38.73445pt too wide) in paragraph at lines 128--128
+[]    \TU/lmtt/m/n/10.95 0.0338, -0.0246, -0.0771, -0.0384, 0.1128, 0.2929, 0.3
+734, 0.2929, ...[] 
+ []
+
+
+Overfull \hbox (44.4832pt too wide) in paragraph at lines 128--128
+[]    \TU/lmtt/m/n/10.95 0.1128, -0.0384, -0.0771, -0.0246, 0.0338, 0.0386, 0.0
+014, -0.0272, ...[] 
+ []
+
+
+Overfull \hbox (44.4832pt too wide) in paragraph at lines 128--128
+[]    \TU/lmtt/m/n/10.95 -0.0193, 0.0075, 0.0198, 0.0077, -0.0100, -0.0127, -0.
+0010, 0.0091, ...[] 
+ []
+
+
+Overfull \hbox (44.4832pt too wide) in paragraph at lines 128--128
+[]    \TU/lmtt/m/n/10.95 0.0069, -0.0023, -0.0067, -0.0028, 0.0031, 0.0042, 0.0
+004, -0.0027, ...[] 
+ []
+
+
+Overfull \hbox (44.4832pt too wide) in paragraph at lines 128--128
+[]    \TU/lmtt/m/n/10.95 -0.0021, 0.0005, 0.0018, 0.0007, -0.0007, -0.0009, -0.
+0001, 0.0005, ...[] 
+ []
+
+
+Overfull \hbox (21.4882pt too wide) in paragraph at lines 128--128
+[]\TU/lmtt/m/n/10.95 [X1,f1] = frekspekin3190(y1(t > 0.3 & t < 0.8,offset1 == 6
+00),1000,fs);[] 
+ []
+
+Invalid UTF-8 byte or sequence at line 128 replaced by U+FFFD.
+Missing character: There is no � in font [lmmono10-regular]:!
+[20]
+File: 4a_multippel.png Graphic file (type bmp)
+<4a_multippel.png>
+
+Overfull \hbox (64.12396pt too wide) in paragraph at lines 132--133
+[][] 
+ []
+
+[21]
+File: 4a_impuls.png Graphic file (type bmp)
+<4a_impuls.png>
+ [22]
+File: 4b_impuls.png Graphic file (type bmp)
+<4b_impuls.png>
+
+Overfull \hbox (50.72299pt too wide) in paragraph at lines 142--143
+[][] 
+ []
+
+[23]
+File: oppgave4.m  (verbatim)
+Invalid UTF-8 byte or sequence at line 149 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 149 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 149 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 149 replaced by U+FFFD.
+Missing character: There is no � in font [lmmono10-regular]:!
+Missing character: There is no � in font [lmmono10-regular]:!
+Missing character: There is no � in font [lmmono10-regular]:!
+Missing character: There is no � in font [lmmono10-regular]:!
+
+Overfull \hbox (108.48592pt too wide) in paragraph at lines 149--149
+[]\TU/lmtt/m/n/10.95 title('N�rtrase. Plott av f�rste prim�rrefleksjon og de tr
+e f�rste havbunnsmultiplene.')[] 
+ []
+
+Invalid UTF-8 byte or sequence at line 149 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 149 replaced by U+FFFD.
+Missing character: There is no � in font [lmmono10-regular]:!
+Missing character: There is no � in font [lmmono10-regular]:!
+
+Overfull \hbox (67.86143pt too wide) in paragraph at lines 149--149
+[]\TU/lmtt/m/n/10.95 title('N�rtrase. Plott av refleksjon og multipler fra grun
+neste sedement�rlag.')[] 
+ []
+
+[24]
+Invalid UTF-8 byte or sequence at line 149 replaced by U+FFFD.
+Missing character: There is no � in font [lmmono10-regular]:!
+File: 5_distans.png Graphic file (type bmp)
+<5_distans.png>
+
+Overfull \hbox (24.62325pt too wide) in paragraph at lines 153--154
+[][] 
+ []
+
+[25]
+File: oppgave5.m  (verbatim)
+Invalid UTF-8 byte or sequence at line 159 replaced by U+FFFD.
+Missing character: There is no � in font [lmmono10-regular]:!
+ [26]
+File: 6a_vnmo.png Graphic file (type bmp)
+<6a_vnmo.png>
+File: 6b_vnmo.png Graphic file (type bmp)
+<6b_vnmo.png>
+ [27] [28] (IN3190_prosjekt.aux) ) 
+Here is how much of TeX's memory you used:
+ 3691 strings out of 427748
+ 49199 string characters out of 3146821
+ 332532 words of memory out of 3000000
+ 7677 multiletter control sequences out of 15000+200000
+ 8238 words of font info for 36 fonts, out of 3000000 for 9000
+ 1328 hyphenation exceptions out of 8191
+ 27i,7n,40p,665b,260s stack positions out of 5000i,500n,10000p,200000b,50000s
+
+Output written on IN3190_prosjekt.pdf (28 pages).
